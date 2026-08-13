@@ -49,6 +49,12 @@ show_pages:
   papers: false
   schedule: false
 
+# Off-site links in the navigation bar, placed before the Past Workshops dropdown.
+# They open in a new tab. Remove an entry to hide it.
+nav_links:
+  - name: "PRDC 2026"
+    url: "https://formal-analysis.com/prdc/2026/"
+
 # Earlier editions, shown as a dropdown at the end of the navigation bar. List them
 # newest first; add next year's entry above AID 2025 rather than replacing it.
 # An empty `items` list hides the whole dropdown.
@@ -147,13 +153,22 @@ submission:
   heading: "Submission Guidelines"
   url: ""
   body: |
-    Papers in both the Regular Paper Track and the R&D Paper Track must meet the
-    following requirements.
+    The workshop invites submissions to two tracks.
+
+    - **Regular Paper Track.** Completed research, presented as a full conference
+      paper with a clear contribution and supporting evaluation.
+    - **R&D Paper Track.** Research carried out under a funded research project
+      and still in progress. Papers introduce the project's objectives and
+      approach and report its interim findings, giving project teams a venue to
+      present ongoing work and gather feedback before the project concludes.
+
+    Papers in both tracks must meet the following requirements.
 
     - **Originality.** Original, unpublished, and not under review at another
       conference or journal.
     - **Length.** At most **6 pages**, including figures, tables, and references.
-    - **Format.** The double-column IEEE conference template.
+    - **Format.** The double-column
+      [IEEE conference template](https://conferences.ieeeauthorcenter.ieee.org/write-your-paper/authoring-tools-and-templates/).
     - **Anonymity.** Reviewing is **double-blind**. Remove author names,
       affiliations, and any identifying information from the manuscript.
     - **Submission.** Through EasyChair. The link will be announced on this page.
@@ -309,9 +324,9 @@ schedule:
   tba_message: "The detailed program will be announced closer to the workshop date."
   intro: >
     This workshop is planned as a one-day event featuring invited talks from
-    leading researchers, peer-reviewed paper presentations, a specialized session
-    for sharing Korea R&D results, and a panel discussion. See the workshop
-    program schedule below.
+    leading researchers, peer-reviewed paper presentations, a dedicated session
+    for sharing results from ongoing funded research projects, and a panel
+    discussion. See the workshop program schedule below.
 
   # "Last Updated on ..." notice. Leave date empty to hide the whole block.
   update:

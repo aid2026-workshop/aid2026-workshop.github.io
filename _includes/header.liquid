@@ -110,6 +110,18 @@
           {% endfor %}
 
           {%- comment -%}
+            Off-site links from nav_links in _data/workshop.yml, e.g. the parent conference.
+            Rendered before the Past Workshops dropdown.
+          {%- endcomment -%}
+          {% for link in site.data.workshop.nav_links %}
+            <li class="nav-item">
+              <a class="nav-link" href="{{ link.url }}" target="_blank" rel="external noopener">
+                {{- link.name -}}
+              </a>
+            </li>
+          {% endfor %}
+
+          {%- comment -%}
             Earlier editions, from previous_editions in _data/workshop.yml. These leave the site, so
             they open in a new tab -- jekyll-link-attributes only rewrites links in page content, not
             in templates, so target/rel are set here explicitly.

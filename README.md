@@ -50,6 +50,19 @@ show_pages:
 
 While a page is `false` it only disappears from the menu. Visiting its URL directly shows that section's `tba_message`.
 
+### Off-site links in the menu bar
+
+`nav_links` in `_data/workshop.yml` adds plain links to the navigation bar, before the
+Past Workshops dropdown. Use it for the parent conference and anything similar.
+
+```yaml
+nav_links:
+  - name: "PRDC 2026"
+    url: "https://formal-analysis.com/prdc/2026/"
+```
+
+Remove an entry to hide it. These links open in a new tab.
+
 ### Links to earlier editions
 
 `previous_editions` in `_data/workshop.yml` becomes a dropdown at the end of the navigation bar.
