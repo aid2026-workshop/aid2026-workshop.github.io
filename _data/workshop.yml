@@ -1,0 +1,355 @@
+# All site content lives in this file.
+# See README.md for how to edit, preview locally, and deploy.
+
+# ---------------------------------------------------------------------------
+# This edition
+# ---------------------------------------------------------------------------
+edition:
+  short_name: "AID 2026"
+  navbar_title: "Workshop on AI Dependability (AID 2026)" # navigation bar and browser tab title
+  # Heading at the top of the home page, and the only place this value is used, so the
+  # inline HTML below stays out of <title> and the meta description.
+  #   <br>     puts the edition in parentheses on its own second line.
+  #   &nbsp;   keeps "(AID 2026)" from ever splitting into "(AID" / "2026)" -- without it the
+  #            break lands within a few pixels of the 930px container edge.
+  full_title: "2nd IEEE PRDC Workshop on AI Dependability<br>(AID&nbsp;2026)"
+  meta_description: >
+    The second Workshop on AI Dependability (AID 2026) — a workshop co-located with
+    the IEEE PRDC 2026, Hong Kong.
+  logo: assets/img/aid-logo-2026.png
+  logo_alt: "AID 2026 Workshop logo"
+  logo_width: "40%"
+
+# ---------------------------------------------------------------------------
+# Date and venue
+# ---------------------------------------------------------------------------
+event:
+  date: "TBD" # e.g. "December 2, 2026"
+  timezone: "HKT" # used in the schedule table header
+  venue:
+    name: "Hong Kong SAR"
+    address: "" # exact venue not announced yet; fill in to have it appended after the name
+    # Paste only the src value from Google Maps > Share > Embed a map. Leave empty to hide the map.
+    map_embed_url: ""
+
+# ---------------------------------------------------------------------------
+# Links and contact. An empty value hides the corresponding section.
+# ---------------------------------------------------------------------------
+links:
+  contact_email: ""
+  # Appended to the page footer. Raw HTML, not Markdown. The banner credit lives here
+  # because the photo is CC BY-SA 4.0 and attribution is required; see README image credits.
+  footer_note: 'Banner photo (cropped) by <a href="https://commons.wikimedia.org/wiki/File:Panorama_of_Hong_Kong_Harbour_from_The_Peak_dllu.jpg">Dllu</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.'
+
+# ---------------------------------------------------------------------------
+# Navigation. Keep a page false until its content is final to hide it from the menu.
+# ---------------------------------------------------------------------------
+show_pages:
+  keynote: false
+  papers: false
+  schedule: false
+
+# Earlier editions, shown as a dropdown at the end of the navigation bar. List them
+# newest first; add next year's entry above AID 2025 rather than replacing it.
+# An empty `items` list hides the whole dropdown.
+previous_editions:
+  heading: "Past Workshops"
+  items:
+    - name: "AID 2025"
+      url: "https://aid2025-workshop.github.io"
+
+# ---------------------------------------------------------------------------
+# Home page
+# ---------------------------------------------------------------------------
+home:
+  summary: >
+    **AID 2026**---A workshop to bring together researchers and industry
+    practitioners in the field of AI and LLM-based systems. This workshop will be
+    an in-person event at PRDC 2026 in **Hong Kong SAR**. The exact venue will be
+    announced on this page.
+
+  # Centred link below the title, e.g. a submission call
+  cta:
+    enabled: false
+    text: "[click here to submit your manuscript]"
+    url: ""
+
+  about_heading: "About the workshop"
+  about: |
+    The AID 2026 workshop provides a forum for researchers and industry
+    practitioners to present and discuss the latest advancements in ensuring the
+    dependability of AI and LLM-based systems. As AI becomes integral to critical
+    infrastructure, its reliability, security, and robustness are paramount.
+
+    This workshop will bring together experts from the dependable computing and AI
+    communities to address new challenges in building trustable AI systems. We
+    welcome submissions that explore innovative solutions, case studies, and
+    fundamental research in this rapidly evolving field.
+
+  # Extra sections appended to the bottom of the home page
+  extra_sections: []
+  # - heading: "Registration"
+  #   body: |
+  #     Registration is handled through the main PRDC 2026 registration page.
+
+# ---------------------------------------------------------------------------
+# Topics of interest
+# ---------------------------------------------------------------------------
+topics:
+  heading: "Topics of interest"
+  lead: "We invite submissions on, but not limited to, the following topics:"
+  items:
+    - title: "AI-based Software Vulnerability Detection and Secure Code Generation"
+      description: >
+        Leveraging AI techniques (e.g., LLMs) to automatically identify
+        vulnerabilities in software and to generate secure, robust code including
+        patches.
+    - title: "AI-based Attack Detection"
+      description: >
+        Using AI models for detecting attacks and anomalies, such as network
+        intrusion, adversarial attacks, model stealing queries, and so on.
+    - title: "LLM-based Rust Translation"
+      description: >
+        Exploring the use of LLMs to translate code into memory-safe languages
+        like Rust to enhance system security and reliability.
+    - title: "AI-based Attack/Defense Simulation"
+      description: >
+        (1) Graph-based simulation for attack and defense simulation with AI
+        (attack/defense simulation methods with Deep learning, Q learning and
+        Graph based learning). (2) Simulating adversarial attacks against AI
+        systems and developing effective defense strategies.
+    - title: "AI based Red Teaming"
+      description: >
+        Methodologies and practices for systematically testing and breaking AI
+        models to uncover hidden flaws, biases, and safety risks.
+    - title: "AI Model Attacks and Defenses"
+      description: >
+        Techniques to exploit vulnerabilities in AI models (e.g., adversarial,
+        model stealing, data extraction attacks) and the ways to mitigate them.
+    - title: "AI dependability, Reliability, and Safety"
+      description: >
+        Measures to ensure AI systems remain robust, fault-tolerant, and safe
+        across diverse conditions.
+    - title: "Responsible and Trustworthy AI"
+      description: >
+        Approaches to building AI that is transparent, fair, and accountable,
+        addressing ethical concerns and fostering user and societal trust.
+    - title: "XAI"
+      description: >
+        Methods and frameworks that provide transparency and interpretability of
+        AI models, enabling users to understand, trust, and effectively validate
+        AI-driven decisions.
+
+# ---------------------------------------------------------------------------
+# Submission guidelines
+# ---------------------------------------------------------------------------
+submission:
+  heading: "Submission Guidelines"
+  url: ""
+  body: |
+    Papers in both the Regular Paper Track and the R&D Paper Track must meet the
+    following requirements.
+
+    - **Originality.** Original, unpublished, and not under review at another
+      conference or journal.
+    - **Length.** At most **6 pages**, including figures, tables, and references.
+    - **Format.** The double-column IEEE conference template.
+    - **Anonymity.** Reviewing is **double-blind**. Remove author names,
+      affiliations, and any identifying information from the manuscript.
+    - **Submission.** Through EasyChair. The link will be announced on this page.
+
+    Accepted papers are expected to be presented in person at the workshop.
+  publication_note: >
+    Accepted papers from both tracks will be published by the IEEE Computer
+    Society Press (EI indexed) as part of the PRDC 2026 proceedings.
+  note: >
+    Please ensure that your submission addresses the core theme of
+    **AI Dependability** and is relevant to the PRDC community. We look forward
+    to your contributions.
+
+# ---------------------------------------------------------------------------
+# Important dates. Filling in `previous` shows the pre-extension date struck through.
+#   Both tracks currently share one schedule, so there is a single unnamed track
+#   and `lead` says so. If the tracks ever diverge, give this track a `name`, add
+#   a second one, and drop or reword `lead` -- each named track then renders as
+#   its own subheading.
+# ---------------------------------------------------------------------------
+important_dates:
+  heading: "Important Dates"
+  lead: "Both the Regular Paper Track and the R&D Paper Track share the **same deadlines**:"
+  tracks:
+    - name: ""
+      items:
+        - label: "Paper submission"
+          date: "11 September 2026"
+          previous: ""
+          note: "(AoE)"
+        - label: "Author notification"
+          date: "9 October 2026"
+          previous: ""
+          note: "(AoE)"
+        - label: "Camera ready submission"
+          date: "20 October 2026"
+          previous: ""
+          note: "(AoE)"
+
+# ---------------------------------------------------------------------------
+# Organizers
+#   style: cards renders photo cards (img required); list renders "Name (Affiliation)".
+#   Put photos in assets/img/ and point img at them. url is optional.
+#   Chairs are listed in their own order; the Program Committee is sorted
+#   alphabetically by given name.
+#---------------------------------------------------------------------------
+organizers:
+  heading: "Workshop Organizers"
+  groups:
+    - role: "Organization Chairs"
+      style: cards
+      members:
+        - name: "Huy Kang Kim"
+          affiliation: "Korea University, Republic of Korea"
+          img: "assets/img/HKim.jpg"
+          url: ""
+        - name: "Dan Dongseong Kim"
+          affiliation: "University of Queensland, Australia"
+          img: "assets/img/DKim.jpeg"
+          url: ""
+        - name: "Sangkyun Lee"
+          affiliation: "Korea University, Republic of Korea"
+          img: "assets/img/SLee.png"
+          url: ""
+
+    - role: "Program Chairs"
+      style: list
+      members:
+        - name: "Hyunjae Kang"
+          affiliation: "University of Queensland, Australia"
+
+    - role: "Program Committee"
+      style: list
+      members:
+        - name: "Ah Reum Kang"
+          affiliation: "Pai Chai University, Republic of Korea"
+        - name: "Byung Il Kwak"
+          affiliation: "Korea University, Republic of Korea"
+        - name: "Hyoungshick Kim"
+          affiliation: "Sungkyunkwan University, Republic of Korea"
+        - name: "Hyun Min Song"
+          affiliation: "Dankook University, Republic of Korea"
+        - name: "Jeonghyun Lee"
+          affiliation: "National Security Research Institute, Republic of Korea"
+        - name: "Jiyoung Woo"
+          affiliation: "Soonchunhyang University, Republic of Korea"
+        - name: "Ke He"
+          affiliation: "University of Canterbury, New Zealand"
+        - name: "Ki-Woong Park"
+          affiliation: "Sejong University, Republic of Korea"
+        - name: "Mee Lan Han"
+          affiliation: "Korea University, Republic of Korea"
+        - name: "Mengmeng Ge"
+          affiliation: "Monash University, Australia"
+        - name: "Sang-Hoon Choi"
+          affiliation: "Sejong University, Republic of Korea"
+        - name: "Sanghoon Jeon"
+          affiliation: "Kookmin University, Republic of Korea"
+        - name: "Seonghoon Jeong"
+          affiliation: "Sookmyung Women's University, Republic of Korea"
+        - name: "Seungjin Ryu"
+          affiliation: "National Security Research Institute, Republic of Korea"
+        - name: "Taekyoung Kwon"
+          affiliation: "Yonsei University, Republic of Korea"
+
+# ---------------------------------------------------------------------------
+# Keynote
+#   tba_message is shown while talks is empty.
+#   id is how schedule.sessions refers to a talk.
+# ---------------------------------------------------------------------------
+keynote:
+  heading: "Keynote"
+  tba_message: "Our keynote speaker will be announced soon. Stay tuned!"
+  talks: []
+  # - id: "secure-programs-with-llms"
+  #   title: '"How to Write Secure Programs with LLMs"'
+  #   name: "Prof. Hyoungshick Kim"
+  #   affiliation: "Sungkyunkwan University, Republic of Korea"
+  #   img: "assets/img/hyoung_hp1.jpg"
+  #   url: ""
+  #   bio: |
+  #     Speaker bio.
+  #   abstract: |
+  #     Talk abstract.
+
+# ---------------------------------------------------------------------------
+# Accepted papers
+#   id is how the schedule refers to a paper. Use lowercase letters, digits and hyphens.
+#   video, pdf and slides are hidden when left empty.
+# ---------------------------------------------------------------------------
+program:
+  intro: ""
+  tba_message: "The list of accepted papers will be published after the notification date."
+  tracks:
+    - name: "Regular Paper Track"
+      papers: []
+      # - id: "example-paper"
+      #   title: "An Example Paper Title"
+      #   authors: "First Author (Affiliation); Second Author (Affiliation)"
+      #   abstract: |
+      #     Paper abstract goes here.
+      #   video: ""
+      #   pdf: ""
+      #   slides: ""
+
+    - name: "R&D Paper Track"
+      papers: []
+
+# ---------------------------------------------------------------------------
+# Program and schedule
+# ---------------------------------------------------------------------------
+schedule:
+  tba_message: "The detailed program will be announced closer to the workshop date."
+  intro: >
+    This workshop is planned as a one-day event featuring invited talks from
+    leading researchers, peer-reviewed paper presentations, a specialized session
+    for sharing Korea R&D results, and a panel discussion. See the workshop
+    program schedule below.
+
+  # "Last Updated on ..." notice. Leave date empty to hide the whole block.
+  update:
+    date: ""
+    body: ""
+
+  session_summary: []
+  # - name: "Session I: System Dependability"
+  #   description: >
+  #     This session focuses on the robustness, verification, and simulation of
+  #     dependable systems.
+
+  # Timetable for the day. sub is a subtitle on the next line; who is the speaker, in italics, below it.
+  overview: []
+  # - time: "09:00--09:10"
+  #   event: "Opening remark for AID'26"
+  # - time: "15:10--16:00"
+  #   event: "AID Workshop Keynote"
+  #   sub: '"How to write secure programs with LLMs?"'
+  #   who: "Prof. Hyoungshick Kim (Sungkyunkwan University)"
+
+  presentation_heading: "Presentation schedule"
+  presentation_note: >
+    Each presentation is allotted a 20-minute slot, structured as a 15-minute
+    talk followed by a 5-minute Q&A session.
+
+  # Presentation order per session. Write each talk in one of three ways:
+  #   paper   : a paper id from program — title and link are filled in automatically
+  #   keynote : an id from keynote — title and link are filled in automatically
+  #   label   : free text — add link to make it a hyperlink
+  sessions: []
+  # - name: "Session I"
+  #   talks:
+  #     - time: "09:10--09:30"
+  #       paper: "example-paper"
+  #     - time: "09:30--09:50"
+  #       label: "Panel discussion"
+  # - name: "Keynote"
+  #   talks:
+  #     - time: "15:10--16:00"
+  #       keynote: "secure-programs-with-llms"

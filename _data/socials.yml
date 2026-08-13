@@ -1,0 +1,15 @@
+# Social links for the theme's social-icon row and its schema.org "sameAs" block.
+#
+# Intentionally empty. This workshop site renders neither of those: the icon row is only
+# included when `enable_navbar_social` is true, and the schema.org block only when
+# `serve_schema_org` is true -- both are false in _config.yml. The workshop contact address
+# lives in `links.contact_email` in _data/workshop.yml instead.
+#
+# The upstream theme ships this file filled with its demo author's accounts; those were
+# removed. If you ever want icons here, set `enable_navbar_social: true` in _config.yml and
+# add real values, e.g.:
+#
+#   email: someone@example.org
+#   github_username: aid2026-workshop
+#
+# See the upstream template for the full list of supported keys.

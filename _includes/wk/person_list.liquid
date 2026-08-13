@@ -1,0 +1,13 @@
+{%- comment -%} members: [{ name, affiliation, url (optional) }] {%- endcomment -%}
+<ul>
+  {%- for m in include.members %}
+    <li>
+      {%- if m.url and m.url != '' -%}
+        <a href="{{ m.url }}" target="_blank" rel="external nofollow noopener">{{ m.name }}</a>
+      {%- else -%}
+        {{ m.name }}
+      {%- endif -%}
+      {%- if m.affiliation and m.affiliation != '' %} ({{ m.affiliation }}){% endif -%}
+    </li>
+  {%- endfor %}
+</ul>

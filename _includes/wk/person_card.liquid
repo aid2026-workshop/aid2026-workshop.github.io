@@ -1,0 +1,32 @@
+{%- comment -%} person: name, affiliation, img, url (optional) {%- endcomment -%}
+{%- assign p = include.person -%}
+<div class="card-item col">
+  {%- if p.url and p.url != '' -%}
+    <a href="{{ p.url }}" target="_blank" rel="external nofollow noopener">
+  {%- endif -%}
+  <div class="card hoverable">
+    <div class="row g-0">
+      <div class="card-img col-sm-4">
+        {%- if p.img and p.img != '' -%}
+          {%- comment -%}
+            figure.liquid, not figure.html: figure.html only emits media="(max-width: N)" sources, so
+            viewports wider than the largest width (1400px) match none of them and fall back to the
+            full-size original. figure.liquid uses srcset w-descriptors, which work at every width.
+            width=150 keeps figure.html's card sizing (figure.liquid would otherwise default to 100%),
+            and sizes tells the browser the rendered size so it picks the smallest usable variant.
+          {%- endcomment -%}
+          {% include figure.liquid path=p.img alt=p.name width="150" sizes="(max-width: 576px) 40vw, 150px" %}
+        {%- endif -%}
+      </div>
+      <div class="col-sm-6">
+        <div class="card-body">
+          <h5 class="card-title text-right">{{ p.name }}</h5>
+          <p class="card-text text-right">{{ p.affiliation }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  {%- if p.url and p.url != '' -%}
+    </a>
+  {%- endif -%}
+</div>

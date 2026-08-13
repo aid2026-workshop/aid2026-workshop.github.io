@@ -1,0 +1,27 @@
+_site
+.bundle
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+.ruby-version
+.tweet-cache
+assets/libs/
+node_modules/
+vendor
+.idea
+.vscode/
+
+# macOS. Both spellings: the real filename is .DS_Store, and gitignore matching is
+# case-sensitive unless core.ignorecase is set, so the lower-case form alone can miss it.
+.DS_Store
+.DS_store
+._*
+
+# Internal working notes -- must never be published.
+NOTES.local.md
+*.local.md
+
+# Editor and OS leftovers
+*~
+*.swp
+Thumbs.db

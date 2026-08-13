@@ -1,0 +1,8 @@
+**/*.map
+**/*.min.css
+**/*.min.js
+assets/css/main.scss
+assets/js/search/*.js
+_sass/font-awesome/*.scss
+_sass/tabler-icons/*.scss
+_scripts/*

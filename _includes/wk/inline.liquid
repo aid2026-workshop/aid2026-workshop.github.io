@@ -1,0 +1,4 @@
+{%- comment -%}
+  Renders a short string as markdown without the surrounding <p>, for use inside tables and HTML.
+{%- endcomment -%}
+{{- include.text | markdownify | remove: '<p>' | remove: '</p>' | strip -}}
