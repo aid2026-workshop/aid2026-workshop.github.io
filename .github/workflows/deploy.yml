@@ -76,17 +76,17 @@ jobs:
         with:
           ruby-version: "3.3.5"
           bundler-cache: true
-      - name: Setup Python 🐍
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.13"
-          cache: "pip" # caching pip dependencies
-      # The upstream template patches giscus.repo into _config.yml here. This site has no
-      # giscus comments and no giscus key in _config.yml, so that step was removed.
+      # The upstream template sets up Python here and installs nbconvert, which
+      # jekyll-jupyter-notebook shells out to when rendering .ipynb files. This site has no
+      # notebooks, so both were removed -- verified by building with nbconvert unavailable.
+      # Restore them if a notebook is ever added. (setup-python also failed outright here:
+      # its cache: "pip" needs a requirements.txt or pyproject.toml, and there is none.)
+      #
+      # The template also patches giscus.repo into _config.yml at this point. This site has
+      # no giscus comments and no giscus key in _config.yml, so that step was removed too.
       - name: Install and Build 🔧
         run: |
           sudo apt-get update && sudo apt-get install -y imagemagick
-          pip3 install --upgrade nbconvert
           export JEKYLL_ENV=production
           bundle exec jekyll build
       - name: Purge unused CSS 🧹
