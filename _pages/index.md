@@ -15,6 +15,11 @@ permalink: /
 <h5 style="text-align:center;"><a href="{{ wk.home.cta.url }}">{{ wk.home.cta.text }}</a></h5>
 {%- endif %}
 
+{%- if wk.home.poster.enabled and wk.home.poster.url != "" %}
+
+<p style="text-align:center;"><a href="{{ wk.home.poster.url | relative_url }}">{{ wk.home.poster.text }}</a></p>
+{%- endif %}
+
 {%- if wk.edition.logo and wk.edition.logo != "" %}
 {%- comment -%}
 Keep the <picture> below on one line: kramdown does not recognise inline tags split across lines.
@@ -50,6 +55,7 @@ and drops the inline style, which breaks the right-hand float.
 {{ wk.submission.body | markdownify }}
 
 {%- if wk.submission.url and wk.submission.url != "" %}
+
 Submission link: [{{ wk.submission.url }}]({{ wk.submission.url }})
 {%- endif %}
 

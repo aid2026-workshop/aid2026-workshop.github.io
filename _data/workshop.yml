@@ -77,9 +77,18 @@ home:
 
   # Centred link below the title, e.g. a submission call
   cta:
-    enabled: false
+    enabled: true
     text: "[click here to submit your manuscript]"
-    url: ""
+    url: "https://easychair.org/conferences/?conf=aid2026"
+
+  # Downloadable Call for Papers poster, shown as a secondary line under the cta.
+  # The file is the dark variant built from cfp/aid-cfp.tex: after editing the
+  # wording there, run cfp/build.sh and copy out/aid2026-cfp-dark.pdf over the
+  # copy in assets/pdf/. The light variant is the one to use for paper printing.
+  poster:
+    enabled: true
+    text: "Download the Call for Papers poster (PDF)"
+    url: assets/pdf/aid2026-cfp-dark.pdf
 
   about_heading: "About the Workshop"
   about: |
@@ -152,7 +161,7 @@ topics:
 # ---------------------------------------------------------------------------
 submission:
   heading: "Submission Guidelines"
-  url: ""
+  url: "https://easychair.org/conferences/?conf=aid2026"
   body: |
     The workshop invites submissions to two tracks.
 
@@ -172,7 +181,8 @@ submission:
       [IEEE conference template](https://conferences.ieeeauthorcenter.ieee.org/write-your-paper/authoring-tools-and-templates/).
     - **Anonymity.** Reviewing is **double-blind**. Remove author names,
       affiliations, and any identifying information from the manuscript.
-    - **Submission.** Through EasyChair. The link will be announced on this page.
+    - **Submission.** Through
+      [EasyChair](https://easychair.org/conferences/?conf=aid2026).
 
     Accepted papers are expected to be presented in person at the workshop.
   publication_note: >
