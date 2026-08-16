@@ -53,7 +53,7 @@ show_pages:
 # They open in a new tab. Remove an entry to hide it.
 nav_links:
   - name: "PRDC 2026"
-    url: "https://formal-analysis.com/prdc/2026/"
+    url: "https://prdc-symposium.org/2026/"
 
 # Earlier editions, shown as a dropdown at the end of the navigation bar. List them
 # newest first; add next year's entry above AID 2025 rather than replacing it.
@@ -234,7 +234,7 @@ organizers:
           img: "assets/img/SLee.png"
           url: ""
 
-    - role: "Program Chairs"
+    - role: "Program Chair"
       style: list
       members:
         - name: "Hyunjae Kang"
