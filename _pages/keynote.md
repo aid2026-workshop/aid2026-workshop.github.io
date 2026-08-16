@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /keynote/
-title: Keynote speech
+title: Keynote Speech
 nav: true
 nav_order: 2
 nav_key: keynote

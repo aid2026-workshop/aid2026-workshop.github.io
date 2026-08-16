@@ -81,7 +81,7 @@ home:
     text: "[click here to submit your manuscript]"
     url: ""
 
-  about_heading: "About the workshop"
+  about_heading: "About the Workshop"
   about: |
     The AID 2026 workshop provides a forum for researchers and industry
     practitioners to present and discuss the latest advancements in ensuring the
@@ -103,7 +103,7 @@ home:
 # Topics of interest
 # ---------------------------------------------------------------------------
 topics:
-  heading: "Topics of interest"
+  heading: "Topics of Interest"
   lead: "We invite submissions on, but not limited to, the following topics:"
   items:
     - title: "AI-based Software Vulnerability Detection and Secure Code Generation"
@@ -125,7 +125,7 @@ topics:
         (attack/defense simulation methods with Deep learning, Q learning and
         Graph based learning). (2) Simulating adversarial attacks against AI
         systems and developing effective defense strategies.
-    - title: "AI based Red Teaming"
+    - title: "AI-based Red Teaming"
       description: >
         Methodologies and practices for systematically testing and breaking AI
         models to uncover hidden flaws, biases, and safety risks.
@@ -353,7 +353,7 @@ schedule:
   #   sub: '"How to write secure programs with LLMs?"'
   #   who: "Prof. Hyoungshick Kim (Sungkyunkwan University)"
 
-  presentation_heading: "Presentation schedule"
+  presentation_heading: "Presentation Schedule"
   presentation_note: >
     Each presentation is allotted a 20-minute slot, structured as a 15-minute
     talk followed by a 5-minute Q&A session.
