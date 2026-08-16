@@ -71,8 +71,9 @@ home:
   summary: >
     **AID 2026**---A workshop to bring together researchers and industry
     practitioners in the field of AI and LLM-based systems. This workshop will be
-    an in-person event at PRDC 2026 in **Hong Kong SAR**. The exact venue will be
-    announced on this page.
+    an in-person event at PRDC 2026, held on **2--4 December 2026** in
+    **Hong Kong SAR**. The exact venue and the workshop day will be announced on
+    this page.
 
   # Centred link below the title, e.g. a submission call
   cta:
@@ -207,6 +208,10 @@ important_dates:
           date: "20 October 2026"
           previous: ""
           note: "(AoE)"
+        - label: "Workshop date"
+          date: "2--4 December 2026"
+          previous: ""
+          note: "(one day within the PRDC 2026 dates; the exact day will be announced)"
 
 # ---------------------------------------------------------------------------
 # Organizers
