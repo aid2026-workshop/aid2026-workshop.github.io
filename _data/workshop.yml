@@ -207,9 +207,9 @@ important_dates:
     - name: ""
       items:
         - label: "Paper submission"
-          date: "11 September 2026"
-          previous: ""
-          note: "(AoE)"
+          date: "18 September 2026"
+          previous: "11 September 2026"
+          note: "(AoE) (Extended)"
         - label: "Author notification"
           date: "9 October 2026"
           previous: ""
@@ -253,7 +253,7 @@ organizers:
       style: list
       members:
         - name: "Hyunjae Kang"
-          affiliation: "University of Queensland, Australia"
+          affiliation: "Kongju National University, Republic of Korea"
 
     - role: "Program Committee"
       style: list

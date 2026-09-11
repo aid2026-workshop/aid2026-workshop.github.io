@@ -86,10 +86,12 @@ Submission link: [{{ wk.submission.url }}]({{ wk.submission.url }})
 <ul>
   {%- for d in t.items %}
     <li>
-      {{- d.label }}:
-      {%- if d.previous and d.previous != "" %} <del>{{ d.previous }}</del>{% endif %}
-      {{ d.date }}
-      {%- if d.note and d.note != "" %} {{ d.note }}{% endif -%}
+      {{- d.label | smartify }}:
+      {%- if d.previous and d.previous != "" %} <del>{{ d.previous | smartify }}</del>
+      <span class="date-extended">{{ d.date | smartify }}</span>
+      {%- else %} {{ d.date | smartify }}
+      {%- endif %}
+      {%- if d.note and d.note != "" %} {{ d.note | smartify }}{% endif -%}
     </li>
   {%- endfor %}
 </ul>

@@ -1423,3 +1423,10 @@ figure.cover {
     color: #23212d !important;
   }
 }
+
+// Important dates
+
+.date-extended {
+  font-weight: bold;
+  color: var(--global-extended-date-color);
+}
