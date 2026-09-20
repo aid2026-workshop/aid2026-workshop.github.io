@@ -90,16 +90,22 @@ home:
       possible, so that we can check its status and make sure your paper is
       considered.
 
-  # Centred link below the title, e.g. a submission call
+  # Centred link below the title, e.g. a submission call. Switched off once the
+  # submission deadline passed: the site is no longer advertised publicly, and
+  # authors who could not submit are handled individually over email instead.
+  # The url is kept so the next edition only has to flip enabled back to true.
   cta:
-    enabled: true
+    enabled: false
     text: "[click here to submit your manuscript]"
-    url: "https://easychair.org/conferences/?conf=aid2026"
+    url: ""
 
-  # Downloadable Call for Papers poster, shown as a secondary line under the cta.
-  # The file is the dark variant built from cfp/aid-cfp.tex: after editing the
-  # wording there, run cfp/build.sh and copy out/aid2026-cfp-dark.pdf over the
-  # copy in assets/pdf/. The light variant is the one to use for paper printing.
+  # Downloadable Call for Papers poster, kept up for reference now that the
+  # deadline has passed. The file is the dark variant built from the sibling
+  # repo ../poster: edit poster/aid-cfp.tex, run poster/build.sh and copy
+  # poster/out/aid2026-cfp-dark.pdf over the copy in assets/pdf/. The light
+  # variant is the one to use for paper printing. The 2026-09-20 rebuild drops
+  # the submission address from the poster body and shows the extended
+  # 18 September deadline; poster/archive/ holds the version before that.
   poster:
     enabled: true
     text: "Download the Call for Papers poster (PDF)"
@@ -176,7 +182,8 @@ topics:
 # ---------------------------------------------------------------------------
 submission:
   heading: "Submission Guidelines"
-  url: "https://easychair.org/conferences/?conf=aid2026"
+  # Empty hides the "Submission link:" line; see the cta comment above for why.
+  url: ""
   body: |
     The workshop invites submissions to two tracks.
 
@@ -196,8 +203,10 @@ submission:
       [IEEE conference template](https://conferences.ieeeauthorcenter.ieee.org/write-your-paper/authoring-tools-and-templates/).
     - **Anonymity.** Reviewing is **double-blind**. Remove author names,
       affiliations, and any identifying information from the manuscript.
-    - **Submission.** Through
-      [EasyChair](https://easychair.org/conferences/?conf=aid2026).
+    - **Submission.** The submission deadline has passed. If you attempted to
+      submit before the deadline but could not complete your submission, please
+      contact us at
+      [aid2026workshop@gmail.com](mailto:aid2026workshop@gmail.com).
 
     Accepted papers are expected to be presented in person at the workshop.
   publication_note: >
