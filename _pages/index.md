@@ -8,6 +8,18 @@ permalink: /
 
 # {{ wk.edition.full_title }}
 
+{%- if wk.home.notice.enabled and wk.home.notice.body != "" %}
+{%- comment -%}
+The body is run through markdownify here rather than being written as a "> " quote in
+YAML, so the blockquote element can carry the .block-warning class. kramdown leaves the
+already-converted HTML inside the raw block alone.
+{%- endcomment %}
+
+<blockquote class="block-warning">
+{{ wk.home.notice.body | markdownify }}
+</blockquote>
+{%- endif %}
+
 {{ wk.home.summary | markdownify }}
 
 {%- if wk.home.cta.enabled and wk.home.cta.url != "" %}

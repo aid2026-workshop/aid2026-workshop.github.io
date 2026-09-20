@@ -36,7 +36,7 @@ event:
 # Links and contact. An empty value hides the corresponding section.
 # ---------------------------------------------------------------------------
 links:
-  contact_email: ""
+  contact_email: "aid2026workshop@gmail.com"
   # Appended to the page footer. Raw HTML, not Markdown. The banner credit lives here
   # because the photo is CC BY-SA 4.0 and attribution is required; see README image credits.
   footer_note: 'Banner photo (cropped) by <a href="https://commons.wikimedia.org/wiki/File:Panorama_of_Hong_Kong_Harbour_from_The_Peak_dllu.jpg">Dllu</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.'
@@ -74,6 +74,21 @@ home:
     an in-person event at PRDC 2026, held on **2--4 December 2026** in
     **Hong Kong SAR**. The exact venue and the workshop day will be announced on
     this page.
+
+  # Notice box at the top of the home page, above the title's submission link.
+  # Rendered as a .block-warning blockquote (see _sass/_base.scss). Set enabled to
+  # false to take it down; keeping the text makes it clear what was last announced.
+  notice:
+    enabled: true
+    body: |
+      **Notice on the submission system (19 September 2026, AoE).** We have found
+      indications that the submission system may not have accepted every
+      submission on **18 September 2026 (AoE)**, in the hours before the paper
+      submission deadline. If you attempted to submit a paper to AID 2026 and
+      your submission did not complete, please contact us at
+      [aid2026workshop@gmail.com](mailto:aid2026workshop@gmail.com) as soon as
+      possible, so that we can check its status and make sure your paper is
+      considered.
 
   # Centred link below the title, e.g. a submission call
   cta:

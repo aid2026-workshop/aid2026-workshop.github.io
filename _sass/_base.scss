@@ -130,6 +130,19 @@ blockquote {
       color: var(--global-danger-block-title);
     }
   }
+
+  /* The three blocks above keep their pale background in the dark theme as well, so a
+     link inside must not pick up the dark-theme link colour: cyan on those backgrounds
+     sits at about 3:1, under the 4.5:1 minimum. Pin it to the light-theme colour and
+     underline it so it still reads as a link. */
+  &.block-tip,
+  &.block-warning,
+  &.block-danger {
+    a {
+      color: $purple-color;
+      text-decoration: underline;
+    }
+  }
 }
 
 // Checklist
