@@ -79,7 +79,7 @@ home:
   # Rendered as a .block-warning blockquote (see _sass/_base.scss). Set enabled to
   # false to take it down; keeping the text makes it clear what was last announced.
   notice:
-    enabled: true
+    enabled: false
     body: |
       **Notice on the submission system (19 September 2026, AoE).** We have found
       indications that the submission system may not have accepted every
@@ -203,10 +203,7 @@ submission:
       [IEEE conference template](https://conferences.ieeeauthorcenter.ieee.org/write-your-paper/authoring-tools-and-templates/).
     - **Anonymity.** Reviewing is **double-blind**. Remove author names,
       affiliations, and any identifying information from the manuscript.
-    - **Submission.** The submission deadline has passed. If you attempted to
-      submit before the deadline but could not complete your submission, please
-      contact us at
-      [aid2026workshop@gmail.com](mailto:aid2026workshop@gmail.com).
+    - **Submission.** The submission deadline has passed. 
 
     Accepted papers are expected to be presented in person at the workshop.
   publication_note: >
