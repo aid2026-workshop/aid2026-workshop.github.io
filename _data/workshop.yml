@@ -216,6 +216,7 @@ submission:
 
 # ---------------------------------------------------------------------------
 # Important dates. Filling in `previous` shows the pre-extension date struck through.
+#   Set `emphasis: true` to show the date in bold red so it stands out.
 #   Both tracks currently share one schedule, so there is a single unnamed track
 #   and `lead` says so. If the tracks ever diverge, give this track a `name`, add
 #   a second one, and drop or reword `lead` -- each named track then renders as
@@ -229,18 +230,22 @@ important_dates:
       items:
         - label: "Paper submission"
           date: "18 September 2026"
+          emphasis: false
           previous: "11 September 2026"
           note: "(AoE) (Extended)"
         - label: "Author notification"
           date: "9 October 2026"
+          emphasis: false
           previous: ""
           note: "(AoE)"
         - label: "Camera ready submission"
-          date: "20 October 2026"
+          date: "Please follow the instructions sent to authors from PRDC 2026."
+          emphasis: true
           previous: ""
-          note: "(AoE)"
+          note: ""
         - label: "Workshop date"
           date: "2--4 December 2026"
+          emphasis: false
           previous: ""
           note: "(one day within the PRDC 2026 dates; the exact day will be announced)"
 
