@@ -74,7 +74,7 @@ jobs:
       - name: Setup Ruby 💎
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: "3.3.5"
+          ruby-version: "3.3"
           bundler-cache: true
       # The upstream template sets up Python here and installs nbconvert, which
       # jekyll-jupyter-notebook shells out to when rendering .ipynb files. This site has no
