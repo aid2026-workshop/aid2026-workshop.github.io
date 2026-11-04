@@ -27,10 +27,10 @@ event:
   date: "TBD" # e.g. "December 2, 2026"
   timezone: "HKT" # used in the schedule table header
   venue:
-    name: "Hong Kong SAR"
-    address: "" # exact venue not announced yet; fill in to have it appended after the name
+    name: "Novotel Century Hong Kong" # PRDC 2026 venue, announced on the PRDC site
+    address: "Hong Kong SAR"
     # Paste only the src value from Google Maps > Share > Embed a map. Leave empty to hide the map.
-    map_embed_url: ""
+    map_embed_url: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d29535.668026424075!2d114.1751902!3d22.2795617!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3404005bca900a7f%3A0xa3a1645056cfdeaa!2sNovotel%20Century%20Hong%20Kong!5e0!3m2!1sen!2sjp!4v1793167038118!5m2!1sen!2sjp"
 
 # ---------------------------------------------------------------------------
 # Links and contact. An empty value hides the corresponding section.
@@ -71,9 +71,9 @@ home:
   summary: >
     **AID 2026**---A workshop to bring together researchers and industry
     practitioners in the field of AI and LLM-based systems. This workshop will be
-    an in-person event at PRDC 2026, held on **2--4 December 2026** in
-    **Hong Kong SAR**. The exact venue and the workshop day will be announced on
-    this page.
+    an in-person event at PRDC 2026, held on **2--4 December 2026** at the
+    [**Novotel Century Hong Kong**](https://www.novotelhongkongcentury.com) in
+    **Hong Kong SAR**. The workshop day will be announced on this page.
 
   # Notice box at the top of the home page, above the title's submission link.
   # Rendered as a .block-warning blockquote (see _sass/_base.scss). Set enabled to
@@ -123,11 +123,8 @@ home:
     welcome submissions that explore innovative solutions, case studies, and
     fundamental research in this rapidly evolving field.
 
-  # Extra sections appended to the bottom of the home page
+  # Extra sections appended to the bottom of the home page, before Contact
   extra_sections: []
-  # - heading: "Registration"
-  #   body: |
-  #     Registration is handled through the main PRDC 2026 registration page.
 
 # ---------------------------------------------------------------------------
 # Topics of interest
@@ -248,6 +245,21 @@ important_dates:
           emphasis: false
           previous: ""
           note: "(one day within the PRDC 2026 dates; the exact day will be announced)"
+
+# ---------------------------------------------------------------------------
+# Registration, shown right after Important Dates. Empty body hides the section.
+# ---------------------------------------------------------------------------
+registration:
+  heading: "Registration"
+  body: |
+    There is no separate workshop registration. To attend AID 2026, please
+    register for the main conference on the
+    [PRDC 2026 registration page](https://prdc-symposium.org/2026/#register).
+
+    **Authors of accepted papers.** Each accepted paper requires a full
+    (non-student) registration by at least one of its authors, and one
+    registration covers only one paper. IEEE members may register at the
+    IEEE Member rate.
 
 # ---------------------------------------------------------------------------
 # Organizers

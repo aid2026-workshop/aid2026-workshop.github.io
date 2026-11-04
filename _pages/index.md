@@ -111,6 +111,13 @@ Submission link: [{{ wk.submission.url }}]({{ wk.submission.url }})
 {%- endfor %}
 {%- endif %}
 
+{%- if wk.registration.body and wk.registration.body != "" %}
+
+## {{ wk.registration.heading }}
+
+{{ wk.registration.body | markdownify }}
+{%- endif %}
+
 {%- if wk.organizers.groups and wk.organizers.groups != empty %}
 
 ## {{ wk.organizers.heading }}
