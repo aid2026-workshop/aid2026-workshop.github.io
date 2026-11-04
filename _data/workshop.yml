@@ -288,10 +288,12 @@ organizers:
           url: ""
 
     - role: "Program Chair"
-      style: list
+      style: cards
       members:
         - name: "Hyunjae Kang"
           affiliation: "Kongju National University, Republic of Korea"
+          img: "assets/img/HKang.jpg"
+          url: ""
 
     - role: "Program Committee"
       style: list
