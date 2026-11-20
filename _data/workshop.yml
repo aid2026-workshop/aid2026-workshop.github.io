@@ -24,13 +24,15 @@ edition:
 # Date and venue
 # ---------------------------------------------------------------------------
 event:
-  date: "TBD" # e.g. "December 2, 2026"
+  date: "Thursday, 3 December 2026"
   timezone: "HKT" # used in the schedule table header
+  # Venue is deliberately left empty: the location is managed on the PRDC 2026 site,
+  # so the schedule page shows the date only. Fill these in to show it here again.
   venue:
-    name: "Novotel Century Hong Kong" # PRDC 2026 venue, announced on the PRDC site
-    address: "Hong Kong SAR"
+    name: ""
+    address: ""
     # Paste only the src value from Google Maps > Share > Embed a map. Leave empty to hide the map.
-    map_embed_url: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d29535.668026424075!2d114.1751902!3d22.2795617!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3404005bca900a7f%3A0xa3a1645056cfdeaa!2sNovotel%20Century%20Hong%20Kong!5e0!3m2!1sen!2sjp!4v1793167038118!5m2!1sen!2sjp"
+    map_embed_url: ""
 
 # ---------------------------------------------------------------------------
 # Links and contact. An empty value hides the corresponding section.
@@ -44,10 +46,12 @@ links:
 # ---------------------------------------------------------------------------
 # Navigation. Keep a page false until its content is final to hide it from the menu.
 # ---------------------------------------------------------------------------
+# `schedule` is the page titled "Program" at /program/ (_pages/schedule.md); the key
+# name is internal and not shown to visitors.
 show_pages:
   keynote: false
   papers: false
-  schedule: false
+  schedule: true
 
 # Off-site links in the navigation bar, placed before the Past Workshops dropdown.
 # They open in a new tab. Remove an entry to hide it.
@@ -71,9 +75,10 @@ home:
   summary: >
     **AID 2026**---A workshop to bring together researchers and industry
     practitioners in the field of AI and LLM-based systems. This workshop will be
-    an in-person event at PRDC 2026, held on **2--4 December 2026** at the
+    an in-person event at PRDC 2026, held at the
     [**Novotel Century Hong Kong**](https://www.novotelhongkongcentury.com) in
-    **Hong Kong SAR**. The workshop day will be announced on this page.
+    **Hong Kong SAR**. AID 2026 takes place on **Thursday, 3 December 2026**,
+    as a parallel session of the main conference.
 
   # Notice box at the top of the home page, above the title's submission link.
   # Rendered as a .block-warning blockquote (see _sass/_base.scss). Set enabled to
@@ -237,14 +242,14 @@ important_dates:
           note: "(AoE)"
         - label: "Camera ready submission"
           date: "Please follow the instructions sent to authors from PRDC 2026."
-          emphasis: true
+          emphasis: false
           previous: ""
           note: ""
         - label: "Workshop date"
-          date: "2--4 December 2026"
+          date: "3 December 2026"
           emphasis: false
           previous: ""
-          note: "(one day within the PRDC 2026 dates; the exact day will be announced)"
+          note: ""
 
 # ---------------------------------------------------------------------------
 # Registration, shown right after Important Dates. Empty body hides the section.
@@ -356,21 +361,102 @@ keynote:
 # ---------------------------------------------------------------------------
 program:
   intro: ""
-  tba_message: "The list of accepted papers will be published after the notification date."
-  tracks:
-    - name: "Regular Paper Track"
-      papers: []
-      # - id: "example-paper"
-      #   title: "An Example Paper Title"
-      #   authors: "First Author (Affiliation); Second Author (Affiliation)"
-      #   abstract: |
-      #     Paper abstract goes here.
-      #   video: ""
-      #   pdf: ""
-      #   slides: ""
+  tba_message: "The list of accepted papers will be published closer to the workshop date."
+  # The page is parked: `tracks` is empty, so /papers/ renders only tba_message and
+  # show_pages.papers is false, keeping it out of the navigation.
+  #
+  # Abstracts are deliberately NOT stored here: this repository is public, and the
+  # submitted-version text should not be published before the camera-ready one.
+  # The full submitted abstracts are in 02-Program/AID2026-workshop-program-draft.md
+  # outside this repository; paste the camera-ready text into `abstract` when it arrives.
+  #
+  # The entries under `tracks_pending_camera_ready` are taken from the SUBMITTED
+  # versions -- titles and abstracts may differ from the camera-ready papers. To
+  # publish the page: replace the camera-ready text, rename the key below to
+  # `tracks`, delete the empty `tracks` above, and set show_pages.papers to true.
+  #
+  # Tracks (confirmed): "Cross-Protocol Observation ..." is the only R&D Paper Track
+  # paper; the other eight are Regular Paper Track. Papers are grouped by presentation
+  # session rather than by track, and the one R&D paper is marked on its schedule row
+  # instead.
+  tracks: []
+  tracks_pending_camera_ready:
+    - name: "Session I: Dependability and Privacy of AI-Enabled Systems"
+      papers:
+        - id: "auditing-ai-vehicle-monitors"
+          title: "Auditing AI Vehicle Monitors across Contexts and Vehicles"
+          authors: "Jaesung Lee, Huy Kang Kim (School of Cybersecurity, Korea University, Republic of Korea)"
+          abstract: ""
+          video: ""
+          pdf: ""
+          slides: ""
 
-    - name: "R&D Paper Track"
-      papers: []
+        - id: "cross-protocol-ev-charging-ids"
+          title: "Cross-Protocol Observation for Intrusion Detection in EV Charging Systems: A Controlled Evaluation Across ISO 15118 and OCPP"
+          track: "R&D Paper Track"
+          authors: "Seohyun Kim, Sanghoon Jeon, Jungwoo Park, Sejun Ahn, Hyunjun Lee (Kookmin University, Republic of Korea)"
+          abstract: ""
+          video: ""
+          pdf: ""
+          slides: ""
+
+        - id: "vai-guard"
+          title: "VAI-Guard: Fault Containment with Reduced Identifier Disclosure for Vehicle AI Services"
+          authors: "Saehee Jun, Hwejae Lee, Yeonjae Kang, Huy Kang Kim (School of Cybersecurity, Korea University, Republic of Korea)"
+          abstract: ""
+          video: ""
+          pdf: ""
+          slides: ""
+
+        - id: "privacy-threat-modeling-sdv-voice"
+          title: "Privacy Threat Modeling for Hybrid Local–Cloud Generative AI Voice Assistants in Software-Defined Vehicles"
+          authors: "Yeonjae Kang, Saehee Jun, Hwejae Lee, Huy Kang Kim (School of Cybersecurity, Korea University, Republic of Korea)"
+          abstract: ""
+          video: ""
+          pdf: ""
+          slides: ""
+
+    - name: "Session II: AI Model Security and Privacy"
+      papers:
+        - id: "beyond-privacy-bars"
+          title: "Beyond Privacy Bars: A Compact GAN Study of Eye-Region Recovery"
+          authors: "Servas Adolph Tarimo, Jiyoung Woo (Dept. of Future Convergence Technology, Soonchunhyang University, Republic of Korea)"
+          abstract: ""
+          video: ""
+          pdf: ""
+          slides: ""
+
+        - id: "npm-node-permutation-symmetry"
+          title: "NPM: Rethinking Gradient Misdirection under Node Permutation Symmetry"
+          authors: "Seonghyun Park, Jiseon Kim, Sangkyun Lee (Korea University, Republic of Korea)"
+          abstract: ""
+          video: ""
+          pdf: ""
+          slides: ""
+
+        - id: "qccb"
+          title: "QCCB: Quantized-Compilation-Conditioned Backdoors"
+          authors: "Junsu Ha, Junghwan Park, Seonghyun Park, Sangkyun Lee (Korea University, Republic of Korea)"
+          abstract: ""
+          video: ""
+          pdf: ""
+          slides: ""
+
+        - id: "cats"
+          title: "CATS: Cyclic Activation-Guided Token Search for Universal LLM Jailbreaks"
+          authors: "Junghwan Park, Taewoong Kang, Jiseon Kim, Sangkyun Lee (Korea University, Republic of Korea)"
+          abstract: ""
+          video: ""
+          pdf: ""
+          slides: ""
+
+        - id: "mosaic"
+          title: "MOSAIC: Multi-turn Jailbreaking of VLMs via Response-Conditioned Prompting and Visual Bias"
+          authors: "Juwon Cho, Yoondong Yeo, Hongeun Ahn, Taekyoung Kwon (Yonsei University, Republic of Korea)"
+          abstract: ""
+          video: ""
+          pdf: ""
+          slides: ""
 
 # ---------------------------------------------------------------------------
 # Program and schedule
@@ -378,10 +464,10 @@ program:
 schedule:
   tba_message: "The detailed program will be announced closer to the workshop date."
   intro: >
-    This workshop is planned as a one-day event featuring invited talks from
-    leading researchers, peer-reviewed paper presentations, a dedicated session
-    for sharing results from ongoing funded research projects, and a panel
-    discussion. See the workshop program schedule below.
+    AID 2026 is a half-day workshop, held as a parallel session of IEEE PRDC 2026.
+    Nine peer-reviewed papers are presented in two sessions. Each presentation is
+    allotted a 20-minute slot, structured as a 15-minute talk followed by a
+    5-minute Q&A session.
 
   # "Last Updated on ..." notice. Leave date empty to hide the whole block.
   update:
@@ -389,37 +475,65 @@ schedule:
     body: ""
 
   session_summary: []
-  # - name: "Session I: System Dependability"
-  #   description: >
-  #     This session focuses on the robustness, verification, and simulation of
-  #     dependable systems.
 
-  # Timetable for the day. sub is a subtitle on the next line; who is the speaker, in italics, below it.
-  overview: []
-  # - time: "09:00--09:10"
-  #   event: "Opening remark for AID'26"
-  # - time: "15:10--16:00"
-  #   event: "AID Workshop Keynote"
-  #   sub: '"How to write secure programs with LLMs?"'
-  #   who: "Prof. Hyoungshick Kim (Sungkyunkwan University)"
+  # The whole programme is one table: session headings are rows, each talk is a row
+  # with its authors in `who`. sub is a subtitle on the next line.
+  overview:
+    - time: "14:00--14:10"
+      kind: "lead"
+      event: "Opening remarks for AID 2026"
+    - time: "14:10--15:30"
+      kind: "session"
+      event: "**Session I: Dependability and Privacy of AI-Enabled Systems**"
+    - time: "14:10--14:30"
+      kind: "talk"
+      event: "Auditing AI Vehicle Monitors across Contexts and Vehicles"
+      who: "Jaesung Lee, Huy Kang Kim"
+    - time: "14:30--14:50"
+      kind: "talk"
+      event: "Cross-Protocol Observation for Intrusion Detection in EV Charging Systems: A Controlled Evaluation Across ISO 15118 and OCPP"
+      sub: '<small style="opacity:0.7">(R&D Paper Track)</small>'
+      who: "Seohyun Kim, Sanghoon Jeon, Jungwoo Park, Sejun Ahn, Hyunjun Lee"
+    - time: "14:50--15:10"
+      kind: "talk"
+      event: "VAI-Guard: Fault Containment with Reduced Identifier Disclosure for Vehicle AI Services"
+      who: "Saehee Jun, Hwejae Lee, Yeonjae Kang, Huy Kang Kim"
+    - time: "15:10--15:30"
+      kind: "talk"
+      event: "Privacy Threat Modeling for Hybrid Local–Cloud Generative AI Voice Assistants in Software-Defined Vehicles"
+      who: "Yeonjae Kang, Saehee Jun, Hwejae Lee, Huy Kang Kim"
+    - time: "15:30--16:00"
+      kind: "break"
+      event: "Tea break"
+    - time: "16:00--17:40"
+      kind: "session"
+      event: "**Session II: AI Model Security and Privacy**"
+    - time: "16:00--16:20"
+      kind: "talk"
+      event: "Beyond Privacy Bars: A Compact GAN Study of Eye-Region Recovery"
+      who: "Servas Adolph Tarimo, Jiyoung Woo"
+    - time: "16:20--16:40"
+      kind: "talk"
+      event: "NPM: Rethinking Gradient Misdirection under Node Permutation Symmetry"
+      who: "Seonghyun Park, Jiseon Kim, Sangkyun Lee"
+    - time: "16:40--17:00"
+      kind: "talk"
+      event: "QCCB: Quantized-Compilation-Conditioned Backdoors"
+      who: "Junsu Ha, Junghwan Park, Seonghyun Park, Sangkyun Lee"
+    - time: "17:00--17:20"
+      kind: "talk"
+      event: "CATS: Cyclic Activation-Guided Token Search for Universal LLM Jailbreaks"
+      who: "Junghwan Park, Taewoong Kang, Jiseon Kim, Sangkyun Lee"
+    - time: "17:20--17:40"
+      kind: "talk"
+      event: "MOSAIC: Multi-turn Jailbreaking of VLMs via Response-Conditioned Prompting and Visual Bias"
+      who: "Juwon Cho, Yoondong Yeo, Hongeun Ahn, Taekyoung Kwon"
 
   presentation_heading: "Presentation Schedule"
   presentation_note: >
     Each presentation is allotted a 20-minute slot, structured as a 15-minute
     talk followed by a 5-minute Q&A session.
 
-  # Presentation order per session. Write each talk in one of three ways:
-  #   paper   : a paper id from program — title and link are filled in automatically
-  #   keynote : an id from keynote — title and link are filled in automatically
-  #   label   : free text — add link to make it a hyperlink
+  # A separate per-session list under the table. Left empty: the timetable above
+  # already carries every talk. See git history for the two-table version.
   sessions: []
-  # - name: "Session I"
-  #   talks:
-  #     - time: "09:10--09:30"
-  #       paper: "example-paper"
-  #     - time: "09:30--09:50"
-  #       label: "Panel discussion"
-  # - name: "Keynote"
-  #   talks:
-  #     - time: "15:10--16:00"
-  #       keynote: "secure-programs-with-llms"

@@ -1,7 +1,7 @@
 ---
 layout: page
-permalink: /schedule/
-title: Schedule
+permalink: /program/
+title: Program
 nav: true
 nav_order: 3
 nav_key: schedule
@@ -18,7 +18,7 @@ nav_key: schedule
 {%- endfor -%}
 
 {%- capture venue_line -%}
-{{ wk.event.date }}
+**{{ wk.event.date }}**
 {%- if wk.event.venue.name and wk.event.venue.name != "" %} / location: {{ wk.event.venue.name }}{% endif -%}
 {%- if wk.event.venue.address and wk.event.venue.address != "" %}, {{ wk.event.venue.address }}{% endif -%}
 {%- endcapture %}
@@ -62,7 +62,23 @@ nav_key: schedule
 
 {%- if wk.schedule.overview and wk.schedule.overview != empty %}
 
-<table class="table table-striped">
+<style>
+/* Grouping for the programme table: each session is one tinted block, with its
+   heading row a shade stronger; the opening and the break sit outside the blocks.
+   Colours are theme variables, so this follows light and dark mode. */
+#wk-program > tbody > tr > td { background-color: var(--global-bg-color); }
+#wk-program > tbody > tr.wk-talk > td { background-color: var(--global-code-bg-color); }
+#wk-program > tbody > tr.wk-session > td {
+  background-color: var(--global-divider-color);
+  border-top: 2px solid var(--global-text-color-light);
+}
+#wk-program > tbody > tr.wk-break > td {
+  font-style: italic;
+  color: var(--global-text-color-light);
+}
+</style>
+
+<table class="table" id="wk-program">
   <thead>
     <tr>
       <th class="text-center"><span class="h5">Time ({{ wk.event.timezone }})</span></th>
@@ -71,7 +87,7 @@ nav_key: schedule
   </thead>
   <tbody>
     {%- for r in wk.schedule.overview %}
-      <tr>
+      <tr class="wk-{{ r.kind | default: 'talk' }}">
         <td class="text-center">{% include wk/inline.liquid text=r.time %}</td>
         <td class="text-center">
           {%- include wk/inline.liquid text=r.event -%}
