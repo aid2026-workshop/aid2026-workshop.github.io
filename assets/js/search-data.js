@@ -23,12 +23,12 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/keynote/";
           },
-        },{id: "nav-schedule",
-          title: "Schedule",
+        },{id: "nav-program",
+          title: "Program",
           description: "",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/schedule/";
+            window.location.href = "/program/";
           },
         },{
       id: 'light-theme',
